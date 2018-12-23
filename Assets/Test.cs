@@ -42,6 +42,29 @@ public class Test : MonoBehaviour
 
     void Start()
     {
+        /* ===== 課題 ===== */
+
+        Debug.Log("課題");
+
+        // 要素の個数が5の、int型の配列arrayを宣言して好きな値で初期化してください
+        int[] array = { 1, 3, 5, 7, 9 };
+
+        // for文を使い、配列の各要素の値を順番に表示してください
+        Debug.Log("for文を使い、配列の各要素の値を順番に表示する。");
+        for (int i = 0; i < array.Length; i++)
+        {
+            Debug.Log(array[i]);
+        }
+
+        // for文を使い、配列の各要素の値を逆順に表示してください
+        Debug.Log("for文を使い、配列の各要素の値を逆順に表示する。");
+        for (int i = array.Length - 1; i > -1; i--)
+        {
+            Debug.Log(array[i]);
+        }
+
+        /* ===== 発展課題 ===== */
+
         // Bossクラスの変数を宣言してインスタンスを代入
         Boss lastboss = new Boss();
 
@@ -49,6 +72,8 @@ public class Test : MonoBehaviour
         lastboss.Attack();
         // 防御用の関数を呼び出す
         lastboss.Defence(3);
+
+        Debug.Log("発展課題");
 
         for (int i = 0; i < numberOfTimesForMagic; i++)
         {
